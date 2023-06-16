@@ -62,7 +62,7 @@ IMHO, the prompt should be helpful. Specifically like to know which user I
 am currently using, the name of the host I am logged into, and the path.
 Imagine your username is `bob` and you just logged into the `hairless-ape`
 host, which could be a laptop or some server somewhere in the cloud or under
-the bed of a friend in Wroclaw.
+the bed of a friend in [Wroclaw](https://en.wikipedia.org/wiki/Wroc%C5%82aw).
 For some of you, this prompt suffices
  
 ```bash
@@ -70,8 +70,8 @@ sh-4.2$
 ```
 
 but, for me, something like this is not only more useful but also can 
-(actually, will. It happened before) avoid me running the wrong command
-in the wrong computer:
+(actually, will. It happened before and it was not a pretty sight) 
+avoid me running the wrong command in the wrong computer:
 
 ```bash
 bob@hairless-ape:/tmp$ 
@@ -84,6 +84,8 @@ If you use Bash,
 you may already have a `.bashrc` file. So you either paste the contents of
 the `prompt` file in it somewhere or save it as a separate file and then 
 add instructions to your `.bashrc` to read it; something like this
+(make sure you do not have a `~/.prompt` already in place. If you do, rename
+the file you are getting from my repo; it will not care, I promise):
 
 ```bash
 curl -o ~/.prompt https://raw.githubusercontent.com/raubvogel/DesktopConf/master/prompt
@@ -97,6 +99,9 @@ fi
 EOF
 ```
 Now that is done, if you want to enable the prompt right now, just type
-`. ~/.prompt` and it should change automagically. The `.bashrc` editing
+```bash
+. ~/.prompt
+``` 
+and it should change automagically. The `.bashrc` editing
 you did is just so the prompt will be set whenever you login or start a new
 session.
