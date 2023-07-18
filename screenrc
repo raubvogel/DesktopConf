@@ -1,0 +1,22 @@
+# use caption to show window list:
+caption always "%{= kw}%?%-Lw%?%{+b kw}%n*%t%f %?(%u)%?%{= kw}%?%+Lw%?"
+
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+# Witchcraft
+nonblock 5
+
+# Increase size of scrollback
+defscrollback 2048
+
+# Automatically create a few screen sessions
+# screen -t num0       0 
+# screen -t num1       1 
+# screen -t num2       2 
+# screen -t num3       3 
+# screen -t num4       4 
+# screen -t num5       5 
+# screen -t num6       6 
+# screen -t num7       7 
+# screen -t num8       8 
+# screen -t num9       9 

@@ -105,3 +105,17 @@ Now that is done, if you want to enable the prompt right now, just type
 and it should change automagically. The `.bashrc` editing
 you did is just so the prompt will be set whenever you login or start a new
 session.
+
+### Screen with window labels and longer scroll size
+I use `screen` a lot, but by default it does not tell me which window I am at,
+which can be rather frustrating. But, it is nothing  a `.screenrc` file 
+can't address and increase the scrollback/buffer size (useful to go back on 
+what
+happened in that window)i while we are at it.
+
+Installing it is pretty much business as usual, but I would suggest to 
+do it before running `screen`
+
+```bash
+curl -o ~/.screenrc https://raw.githubusercontent.com/raubvogel/DesktopConf/master/screenrc
+```
