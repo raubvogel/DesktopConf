@@ -54,7 +54,7 @@ can use mine by
 Linux distros have it by default, or it is a package away), you can then run
 
 ```bash
-curl -o ~/.vim/vimrc https://raw.githubusercontent.com/raubvogel/DesktopConf/master/vimrc
+curl -JL -o ~/.vim/vimrc https://raw.githubusercontent.com/raubvogel/DesktopConf/master/vimrc
 ```
 
 ### Bourne/Bash prompt: `prompt`
@@ -88,7 +88,7 @@ add instructions to your `.bashrc` to read it; something like this
 the file you are getting from my repo; it will not care, I promise):
 
 ```bash
-curl -o ~/.prompt https://raw.githubusercontent.com/raubvogel/DesktopConf/master/prompt
+curl -JL -o ~/.prompt https://raw.githubusercontent.com/raubvogel/DesktopConf/master/prompt
 
 cat >> ~/.bashrc << 'EOF'
 
@@ -117,5 +117,5 @@ Installing it is pretty much business as usual, but I would suggest to
 do it before running `screen`
 
 ```bash
-curl -o ~/.screenrc https://raw.githubusercontent.com/raubvogel/DesktopConf/master/screenrc
+curl -JL -o ~/.screenrc https://raw.githubusercontent.com/raubvogel/DesktopConf/master/screenrc
 ```
