@@ -54,7 +54,8 @@ can use mine by
 Linux distros have it by default, or it is a package away), you can then run
 
 ```bash
-curl -JL -o ~/.vim/vimrc https://raw.githubusercontent.com/raubvogel/DesktopConf/master/vimrc
+mkdir ~/.vim
+curl https://raw.githubusercontent.com/raubvogel/DesktopConf/master/vimrc > ~/.vim/vimrc 
 ```
 
 ### Bourne/Bash prompt: `prompt`
@@ -88,13 +89,13 @@ add instructions to your `.bashrc` to read it; something like this
 the file you are getting from my repo; it will not care, I promise):
 
 ```bash
-curl -JL -o ~/.prompt https://raw.githubusercontent.com/raubvogel/DesktopConf/master/prompt
+curl https://raw.githubusercontent.com/raubvogel/DesktopConf/master/prompt > ~/.prompt 
 
 cat >> ~/.bashrc << 'EOF'
 
 # Set the prompt
 if [ -f ~/.prompt ]; then
-	. ~/.prompt
+        . ~/.prompt
 fi
 EOF
 ```
@@ -107,7 +108,7 @@ you did is just so the prompt will be set whenever you login or start a new
 session.
 
 ### Screen with window labels and longer scroll size
-I use `screen` a lot, but by default it does not tell me which window I am at,
+I use [`screen`](https://www.gnu.org/software/screen/) a lot, but by default it does not tell me which window I am at,
 which can be rather frustrating. But, it is nothing  a `.screenrc` file 
 can't address and increase the scrollback/buffer size (useful to go back on 
 what
@@ -117,5 +118,4 @@ Installing it is pretty much business as usual, but I would suggest to
 do it before running `screen`
 
 ```bash
-curl -JL -o ~/.screenrc https://raw.githubusercontent.com/raubvogel/DesktopConf/master/screenrc
-```
+
