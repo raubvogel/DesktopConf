@@ -115,7 +115,11 @@ what
 happened in that window)i while we are at it.
 
 Installing it is pretty much business as usual, but I would suggest to 
-do it before running `screen`
+do it before running `screen`. Also note in the following example you are 
+overwriting the current `~/.screenrc`. If you already have something
+configured, you may want to look at my 
+[version of the file](https://github.com/raubvogel/DesktopConf/blob/master/screenrc) and see if there is anything you want to steal from it.
 
 ```bash
-
+curl https://raw.githubusercontent.com/raubvogel/DesktopConf/master/screenrc > ~/.screenrc 
+```
