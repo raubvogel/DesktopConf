@@ -91,6 +91,8 @@ the file you are getting from my repo; it will not care, I promise):
 ```bash
 curl https://raw.githubusercontent.com/raubvogel/DesktopConf/master/prompt > ~/.prompt 
 
+ln -s .bash_profile .profile
+
 cat >> ~/.bashrc << 'EOF'
 
 # Set the prompt
@@ -123,3 +125,4 @@ configured, you may want to look at my
 ```bash
 curl https://raw.githubusercontent.com/raubvogel/DesktopConf/master/screenrc > ~/.screenrc 
 ```
+
