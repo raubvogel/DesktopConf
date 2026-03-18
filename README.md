@@ -58,6 +58,44 @@ mkdir ~/.vim
 curl https://raw.githubusercontent.com/raubvogel/DesktopConf/master/vimrc > ~/.vim/vimrc 
 ```
 
+#### Issues
+
+##### Sorry, the command is not available in this version: syntax on
+
+After you install this `vimrc` file (or append it to yours), you may see the 
+following error (`E319`) message when you try to open a file:
+
+```bash
+user@desktop:~$ vi some-file.sh 
+Error detected while processing /home/woozle/.vim/vimrc:
+line    7:
+E319: Sorry, the command is not available in this version: syntax on
+Press ENTER or type command to continue
+```
+
+The first thing you should do next is to find which version of `vi` you are
+running; one way is to use the `readlink` command:
+
+```bash
+user@desktop:~$ readlink -f $(which vi)
+/usr/bin/vim.tiny
+user@desktop:~$ 
+```
+
+If the outcome is `/usr/bin/vim.tiny` as shown above, you have the bare minimal
+`vi` package; people using ubuntu and debian may find that as the default. You
+have then two options:
+
+1. Stick to `vim.tiny`. Nothing wrong with that; it just means my `vimrc` will
+not work for you as it stands. Well, it will if you just comment out the
+`syntax on` line by placing a `"` on the beginning of the line.
+
+   ```bash
+   " syntax on
+   ```
+2. Upgrade to a more full-fledged version of `vim`. For a debian/ubuntu derived
+distro, that would be `vim`.
+
 ### Bourne/Bash prompt: `prompt`
 IMHO, the prompt should be helpful. Specifically like to know which user I 
 am currently using, the name of the host I am logged into, and the path.
@@ -124,5 +162,24 @@ configured, you may want to look at my
 
 ```bash
 curl https://raw.githubusercontent.com/raubvogel/DesktopConf/master/screenrc > ~/.screenrc 
+```
+
+### Run protonVPN whenever computer is connected to the network
+
+As the name of this session implies, I run [protonVPN](https://protonvpn.com/).
+And if you have been following this document, I like to do stuff using the
+command line instead of GUI whenever possible. So, what about automating
+starting the vpn as soon as a network connection is established?
+
+Assuming you have `protonvpn-cli` already installed, here is how to trigger
+it using systemd. Since we would start protonvpn as your user, why not run
+the systemd service as your user?
+
+```bash
+mkdir -p ~/.config/systemd/user
+curl https://raw.githubusercontent.com/raubvogel/DesktopConf/master/protonvpn.service > ~/.config/systemd/user/protonvpn.service
+
+systemctl --user enable protonvpn.service
+systemctl --user start protonvpn.service
 ```
 
