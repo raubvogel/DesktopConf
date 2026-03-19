@@ -191,5 +191,6 @@ systemctl --user start protonvpn.service
 ```
 
 protonVPN here is set to start using the United States as its country; this
-should work for both free and paid levels. However, you shoould adjust to
+should work for both free and paid levels. However, you should adjust 
+`~/.config/systemd/user/protonvpn.service` to
 fit your needs.
