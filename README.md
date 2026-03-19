@@ -171,7 +171,14 @@ And if you have been following this document, I like to do stuff using the
 command line instead of GUI whenever possible. So, what about automating
 starting the vpn as soon as a network connection is established?
 
-Assuming you have `protonvpn-cli` already installed, here is how to trigger
+Assuming you have `protonvpn-cli` already installed, and already configured
+it to login as your user (in this case `vpnuser@example.com`)
+
+```bash
+protonvpn signin vpnuser@example.com
+```
+
+here is how to trigger
 it using systemd. Since we would start protonvpn as your user, why not run
 the systemd service as your user?
 
@@ -183,3 +190,6 @@ systemctl --user enable protonvpn.service
 systemctl --user start protonvpn.service
 ```
 
+protonVPN here is set to start using the United States as its country; this
+should work for both free and paid levels. However, you shoould adjust to
+fit your needs.
