@@ -42,12 +42,17 @@ Let's now go into specific details for each file here (yes, that means this
 file you are reading right now will be updated as time goes by):
 
 ### vi/vim: `vimrc`
-I like not only to have my vi sessions to be aware of the file type I am using
-but also show that in colours I can see in the different terminals and computers
-I use. 
+
+#### Features
+
+- vi sessions aware of the file type I am using 
+- Show the different commands in colours I can see 
+- When moving the arreow keys, or hjkl keys, vi will leave the insert mode
+
 That is done editing the `~/.vim/vimrc` file. If you do not have one, you
 can use mine by
 
+#### Steps
 1. Create a `~/.vim/` directory.
 
 1. Download my `vimrc` and install it. If you have `curl` (MacOS and many
@@ -95,6 +100,10 @@ not work for you as it stands. Well, it will if you just comment out the
    ```
 2. Upgrade to a more full-fledged version of `vim`. For a debian/ubuntu derived
 distro, that would be `vim`.
+
+```bash
+apt-get install vim
+```
 
 ### Bourne/Bash prompt: `prompt`
 IMHO, the prompt should be helpful. Specifically like to know which user I 
