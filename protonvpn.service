@@ -6,7 +6,7 @@ ConditionPathExists=/sys/class/net/wlp58s0
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/protonvpn connect --country "Switzerland"
+ExecStart=/usr/bin/protonvpn connect --country "United States"
 Restart=on-failure
 RestartSec=5
 ExecStop=/usr/bin/protonvpn disconnect
