@@ -176,6 +176,7 @@ curl https://raw.githubusercontent.com/raubvogel/DesktopConf/master/screenrc > ~
 ### Run protonVPN whenever computer is connected to the network
 
 As the name of this session implies, I run [protonVPN](https://protonvpn.com/).
+There I admit it!
 And if you have been following this document, I like to do stuff using the
 command line instead of GUI whenever possible. So, what about automating
 starting the vpn as soon as a network connection is established?
@@ -187,8 +188,9 @@ it to login as your user (in this case `vpnuser@example.com`)
 protonvpn signin vpnuser@example.com
 ```
 
-here is how to trigger
-it using systemd. Since we would start protonvpn as your user, why not run
+Here is how to trigger
+it using systemd (not available in the Mac; thank your stars!). 
+Since we would start protonvpn as your user, why not run
 the systemd service as your user?
 
 ```bash
@@ -203,3 +205,13 @@ protonVPN here is set to start using the United States as its country; this
 should work for both free and paid levels. However, you should adjust 
 `~/.config/systemd/user/protonvpn.service` to
 fit your needs.
+
+### Run protonvpn command line
+
+
+
+```bash
+mkdir ~/.vim
+curl https://raw.githubusercontent.com/raubvogel/DesktopConf/master/vimrc > ~/.vim/vimrc 
+```
+
